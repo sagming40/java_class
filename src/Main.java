@@ -2,13 +2,14 @@
 public class Main {
 
     public static void main(String[] args) {
-        int score = 65;
+        String order = "COFFEE, 2, HOT";
+        String[] parts = order.split(",");
+        if (parts.length == 3) {
+            System.out.println("상품: " + parts[0]);
 
-        String result
-                = score <= 60
-                        ? "합격"
-                        : "재시험";
+            System.out.println("수량: " + parts[1]);
 
-        System.out.println(result);
+            System.out.println("옵션: " + parts[2]);
+        }
     }
 }
